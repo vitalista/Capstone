@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>BaliwagAgriOffice</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/agri-logo.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="../assets/vendor/aquill/quill.bubble.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <!-- <link href="../assets/vendor/simple-datatables/style.css" rel="stylesheet"> -->
+
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Datatables CDN -->
+  <!-- <link rel="stylesheet" href="../assets/vendor/datatables/buttons.dataTables.min.css"> -->
+   <link rel="stylesheet" href="../assets\css\dt-buttons.css">
+
+  <!-- <script src="../assets\vendor\datatables\jquery-3.6.0.min.js"></script>
+  <script src="../assets\vendor\datatables\jquery.dataTables.min.js"></script>
+  <script src="../assets\vendor\datatables\dataTables.buttons.min.js"></script>
+  <script src="../assets\vendor\datatables\jszip.min.js"></script>
+  <script src="../assets\vendor\datatables\buttons.html5.min.js"></script>
+  <script src="../assets\vendor\datatables\buttons.print.min.js"></script> -->
+
+  <!-- DataTables CSS -->
+  <link href="https://cdn.datatables.net/2.1.7/css/dataTables.dataTables.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.datatables.net/buttons/3.1.2/css/buttons.dataTables.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.datatables.net/colreorder/2.0.4/css/colReorder.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/datetime/1.5.4/css/dataTables.dateTime.min.css" rel="stylesheet">
+    <link href="../assets\vendor\datatables\fixedHeader.datatables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/responsive/3.0.3/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/rowreorder/1.5.0/css/rowReorder.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+    <!-- MAP -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- select2 library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=&libraries=places"></script>
+</head>
+
+<body style="overflow: hidden;">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="" class="logo d-flex align-items-center">
+        <img src="../assets/img/agri-logo.png" alt="">
+        <span class="d-none d-lg-block">BaliwagAgriOffice</span>
+      </a>
+    </div><!-- End Logo -->
+
+  </header><!-- End Header -->
+
+  <main class="login-bg">
+    <div class="container">
+
+      <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+
+              <div class="card mb-3" style="background-color: transparent;">
+
+                <div class="card-body auth-card" data-aos="zoom-in" data-aos-duration="500">
+
+                  <div class="pt-4 pb-2">
+                    <h5 class="card-title text-center pb-0 fs-4">Login</h5>
+                    <p class="text-center small">Enter your username & password to login</p>
+                  </div>
+
+                  <form class="row g-3 needs-validation" method="POST" action="../backend/route.php" novalidate>
+
+                    <div class="col-10 mx-auto">
+                      <label for="yourUsername" class="form-label text-center">Username</label>
+                      <div class="input-group has-validation d-flex justify-content-center">
+                        <span class="input-group-text" id="username">@</span>
+                        <input type="text" name="username" class="form-control" id="yourUsername" required>
+                        <div class="invalid-feedback">Please enter your username.</div>
+                      </div>
+                    </div>
+
+                    <div class="col-10 mx-auto mb-3">
+                      <label for="yourPassword" class="form-label text-center">Password</label>
+                      <div class="input-group has-validation d-flex justify-content-center">
+                        <span class="input-group-text" id="password"><i class="bi bi-eye" id="iconPassword"></i></span>
+                        <input type="password" name="password" class="form-control" id="yourPassword" required>
+                        <div class="invalid-feedback">Please enter your password!</div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 mb-2 d-flex justify-content-center">
+                      <button class="btn btn-success w-75" name="login" type="submit">Login</button>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main><!-- End #main -->
+
+  <footer id="footer" class="footer">
+
+<!-- jQuery -->
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/2.1.7/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.1.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.1.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.1.2/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/colreorder/2.0.4/js/dataTables.colReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/4.0.1/js/dataTables.fixedHeader.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.3/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/rowreorder/1.5.0/js/dataTables.rowReorder.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+
+  </footer><!-- End Footer -->
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="../assets/vendor/echarts/echarts.min.js"></script>
+  <script src="../assets/vendor/quill/quill.js"></script>
+  <!-- <script src="../assets/vendor/simple-datatables/simple-datatables.js"></script> -->
+  <script src="../assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+
+  <script>
+      AOS.init();
+  </script>
+
+   
+
+</body>
+
+</html>
