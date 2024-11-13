@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>BaliwagAgriOffice</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <!-- Favicons -->
+    <link href="../assets/img/agri-logo.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="../assets/vendor/aquill/quill.bubble.css" rel="stylesheet">
+    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+  
+    <!-- Datatables CDN -->
+     <link rel="stylesheet" href="../assets\css\dt-buttons.css">
+  
+  
+    <!-- DataTables CSS -->
+    <link href="https://cdn.datatables.net/2.1.7/css/dataTables.dataTables.min.css" rel="stylesheet">
+      <link href="https://cdn.datatables.net/colreorder/2.0.4/css/colReorder.dataTables.min.css" rel="stylesheet">
+      <link href="https://cdn.datatables.net/datetime/1.5.4/css/dataTables.dateTime.min.css" rel="stylesheet">
+      <link href="../assets\vendor\datatables\fixedHeader.datatables.min.css" rel="stylesheet">
+      <link href="https://cdn.datatables.net/responsive/3.0.3/css/responsive.dataTables.min.css" rel="stylesheet">
+      <link href="https://cdn.datatables.net/rowreorder/1.5.0/css/rowReorder.dataTables.min.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+      <!-- MAP -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  
+      <!-- select2 library -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+      <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+  
+      <!-- Google Map -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=&libraries=places"></script>
+  </head>
+
+
+<body class="login-bg">
+
+   <!-- ======= Header ======= -->
+   <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="../assets/img/agri-logo.png" alt="">
+        <span class="d-none d-lg-block">BaliwagAgriOffice</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+    
+    
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+    
+    
+        <li class="nav-item dropdown pe-3">
+    
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="../assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">J. Delacruz</span>
+          </a><!-- End Profile Iamge Icon -->
+    
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Juan Dela Cruz</h6>
+              <span>Admin</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+    
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="../user/user-settings.html">
+                <i class="bi bi-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+    
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="../index.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Log Out</span>
+              </a>
+            </li>
+    
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+    
+      </ul>
+    </nav><!-- End Icons Navigation -->
+    
+    </header>
+    <!-- End Header -->
+   <!-- ======= Sidebar ======= -->
+
+
+   <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link " href="../dashboard.html">
+              <i class="bi bi-bar-chart-fill"></i>
+              <span>DashBoard</span>
+            </a>
+          </li><!--DashBoard -->
+        
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#farmers" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-person-fill"></i><span>Farmers</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="farmers" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+              <li>
+                <a href="../farmer/farmer-list.html">
+                  <i class="bi bi-circle-fill"></i><span>List</span>
+                </a>
+              </li>
+              <li>
+                <a href="../farmer/farmer-add.html">
+                  <i class="bi bi-circle-fill"></i><span>Create</span>
+                </a>
+              </li>
+            </ul>
+          </li><!-- Farmers-->
+
+          <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#assets" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-house-fill"></i>
+            <span>Assets</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="assets" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+              <li>
+                <a href="parcels.html">
+                  <i class="bi bi-puzzle-fill"></i><span>Parcels</span>
+                </a>
+              </li>
+              <li>
+                <a href="crops.html">
+                  <i class="bi bi-sun-fill"></i><span>Crops</span>
+                </a>
+              </li>
+              <li>
+                <a href="livestocks.html">
+                  <i class="bi bi-piggy-bank-fill"></i><span>Livestocks</span>
+                </a>
+              </li>
+            </ul>
+        </li><!-- Assets-->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#programs" data-bs-toggle="collapse" href="#">
+              <i class="bi bi-envelope-fill"></i>
+              <span>Programs</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="programs" class="nav-content collapse" data-bs-parent="#sidebar-nav"> <!-- Add 'show' if the menu should be expanded by default -->
+              <li>
+                <a href="../program/programs-list.html">
+                  <i class="bi bi-circle-fill"></i><span>List</span>
+                </a>
+              </li>
+              <li>
+                <a href="../program/program-add.html">
+                  <i class="bi bi-circle-fill"></i><span>Create</span>
+                </a>
+              </li>
+              <li>
+                <a href="../program/resources-list.html">
+                  <i class="bi bi-circle-fill"></i><span>Resources</span>
+                </a>
+              </li>
+            </ul>
+          </li><!-- Programs-->
+   
+          <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#distribution" data-bs-toggle="collapse" href="#">
+              <i class="bi bi-hand-index-fill"></i>
+              <span>Distribution</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="distribution" class="nav-content collapse" data-bs-parent="#sidebar-nav"> <!-- Add 'show' if the menu should be expanded by default -->
+              <li>
+                <a href="../distribution/distributions-list.html">
+                  <i class="bi bi-circle-fill"></i><span>List</span>
+                </a>
+              </li>
+              <li>
+                <a href="../distribution/distribution-multiple-add.html">
+                  <i class="bi bi-circle-fill"></i><span>Create</span>
+                </a>
+              </li>
+            </ul>
+          </li><!-- Distribution-->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#users" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-person-circle"></i>
+            <span>Users</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="users" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+              <li>
+                <a href="../user/users-list.html">
+                  <i class="bi bi-circle-fill"></i><span>List</span>
+                </a>
+              </li>
+              <li>
+                <a href="../user/user-add.html">
+                  <i class="bi bi-circle-fill"></i><span>Create</span>
+                </a>
+              </li>
+            </ul>
+          </li><!-- users-->
+    
+    </ul>
+    
+    </aside><!-- End Sidebar-->
+    <main id="main" class="main">
+
+        <div class="pagetitle">
+        </div><!-- End Page Title -->
+    
+        <section class="section">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-body main-table">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="card-header">Livestocks list</h5>
+                    <div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ExtralargeModal">
+                    Filter
+                  </button>
+                    <a href="../farmer/farmer-add.html" class="btn btn-secondary"><i class="bi bi-plus-lg"></i></a>
+                    </div>
+                  </div>
+
+                  <div id="loadingDiv" class="d-flex justify-content-center d-none">
+                    <div class="spinner-border" style="width: 50px; height: 50px;" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                  </div>
+    
+    
+                  <table id="example" class="display nowrap d-none">
+                    <thead>
+                      <tr>
+                        <th>FFRS</th>
+                        <th>Animal Type</th>
+                        <th class="text-start">No of Heads</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>001-001-00001</td>
+                        <td>Turkeys</td>
+                        <td class="text-start">120 heads</td>
+                        <td>
+                          <a href="../program/program-view.html" class="btn btn-success"><i class="bi bi-three-dots"></i></a>
+                          <a href="#" class="btn btn-danger"><i class="bi bi-archive-fill"></i></a>
+                          <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#activityModal"><i class="bi bi-info-circle-fill"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>001-001-00002</td>
+                        <td>Sheep</td>
+                        <td class="text-start">75 heads</td>
+                        <td>
+                          <a href="../program/program-view.html" class="btn btn-success"><i class="bi bi-three-dots"></i></a>
+                          <a href="#" class="btn btn-danger"><i class="bi bi-archive-fill"></i></a>
+                          <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#activityModal"><i class="bi bi-info-circle-fill"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>001-001-00003</td>
+                        <td>Goats</td>
+                        <td class="text-start">40 heads</td>
+                        <td>
+                          <a href="../program/program-view.html" class="btn btn-success"><i class="bi bi-three-dots"></i></a>
+                          <a href="#" class="btn btn-danger"><i class="bi bi-archive-fill"></i></a>
+                          <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#activityModal"><i class="bi bi-info-circle-fill"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>001-001-00004</td>
+                        <td>Pigs</td>
+                        <td class="text-start">100 heads</td>
+                        <td>
+                          <a href="../program/program-view.html" class="btn btn-success"><i class="bi bi-three-dots"></i></a>
+                          <a href="#" class="btn btn-danger"><i class="bi bi-archive-fill"></i></a>
+                          <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#activityModal"><i class="bi bi-info-circle-fill"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>001-001-00005</td>
+                        <td>Buffalo</td>
+                        <td class="text-start">85 heads</td>
+                        <td>
+                          <a href="../program/program-view.html" class="btn btn-success"><i class="bi bi-three-dots"></i></a>
+                          <a href="#" class="btn btn-danger"><i class="bi bi-archive-fill"></i></a>
+                          <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#activityModal"><i class="bi bi-info-circle-fill"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>001-001-00006</td>
+                        <td>Chicken</td>
+                        <td class="text-start">500 heads</td>
+                        <td>
+                          <a href="../program/program-view.html" class="btn btn-success"><i class="bi bi-three-dots"></i></a>
+                          <a href="#" class="btn btn-danger"><i class="bi bi-archive-fill"></i></a>
+                          <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#activityModal"><i class="bi bi-info-circle-fill"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>001-001-00007</td>
+                        <td>Turkeys</td>
+                        <td class="text-start">150 heads</td>
+                        <td>
+                          <a href="../program/program-view.html" class="btn btn-success"><i class="bi bi-three-dots"></i></a>
+                          <a href="#" class="btn btn-danger"><i class="bi bi-archive-fill"></i></a>
+                          <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#activityModal"><i class="bi bi-info-circle-fill"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>001-001-00008</td>
+                        <td>Rabbits</td>
+                        <td class="text-start">30 heads</td>
+                        <td>
+                          <a href="../program/program-view.html" class="btn btn-success"><i class="bi bi-three-dots"></i></a>
+                          <a href="#" class="btn btn-danger"><i class="bi bi-archive-fill"></i></a>
+                          <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#activityModal"><i class="bi bi-info-circle-fill"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>001-001-00009</td>
+                        <td>Goats</td>
+                        <td class="text-start">60 heads</td>
+                        <td>
+                          <a href="../program/program-view.html" class="btn btn-success"><i class="bi bi-three-dots"></i></a>
+                          <a href="#" class="btn btn-danger"><i class="bi bi-archive-fill"></i></a>
+                          <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#activityModal"><i class="bi bi-info-circle-fill"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>001-001-00010</td>
+                        <td>Ducks</td>
+                        <td class="text-start">25 heads</td>
+                        <td>
+                          <a href="../program/program-view.html" class="btn btn-success"><i class="bi bi-three-dots"></i></a>
+                          <a href="#" class="btn btn-danger"><i class="bi bi-archive-fill"></i></a>
+                          <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#activityModal"><i class="bi bi-info-circle-fill"></i></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>                  
+  
+                  </table>
+                </div>
+              </div>
+    
+            </div>
+          </div>
+        </section>
+    
+      </main><!-- End #main -->
+      
+   
+<script>
+    const entryFade = (card) => {
+      card.setAttribute('data-aos', 'fade-out');
+      card.setAttribute('data-aos-duration', '500');
+    }
+
+    const removalFade = (card) => {
+      card.style.opacity = '1';
+      card.style.transition = 'opacity 0.5s ease';
+      card.style.opacity = '0';
+    }
+</script>
+  <script>
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+    const tabs = document.querySelectorAll('.nav-link');
+
+    prevButton.addEventListener('click', () => {
+      const activeTab = document.querySelector('.nav-link.active');
+      if (activeTab) {
+        const prevTab = activeTab.parentElement.previousElementSibling;
+        if (prevTab) {
+          prevTab.querySelector('.nav-link').click();
+        }
+      }
+
+      // Change class for buttons
+    });
+
+    nextButton.addEventListener('click', () => {
+      const activeTab = document.querySelector('.nav-link.active');
+      if (activeTab) {
+        const nextTab = activeTab.parentElement.nextElementSibling;
+        if (nextTab) {
+          nextTab.querySelector('.nav-link').click();
+        }
+      }
+
+    });
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const activeTab = document.querySelector('.nav-link.active');
+        if (activeTab) {
+          activeTab.classList.remove('active');
+        }
+        tab.classList.add('active');
+      });
+    });
+
+
+
+    let newFarmInput = `
+    <h5 class="card-title ms-3">Parcel</h5>
+      <div class="card-body">
+            <div class="row">
+             <h6 class="mt-2 me-3">Owner Information <span class="text-danger">*</span></h6>
+                <div class="col-md-4 mt-1">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="" placeholder="" required>
+                        <label for="floatingOFname">Owner First Name</label>
+                        <div class="invalid-feedback">Please enter.</div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-1">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="" placeholder="" required>
+                        <label for="floatingOLname">Owner Last Name</label>
+                        <div class="invalid-feedback">Please enter.</div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-1" style="margin-top: -11px;">
+                    <label for="validationCustom11" class="form-label">Ownership Type<span class="red-star">*</span></label>
+                    <select class="form-select" id="" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option value="Tenant">Tenant</option>
+                        <option value="Registered Owner">Registered Owner</option>
+                        <option value="Lesse">Lesse</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    <div class="invalid-feedback">Please select.</div>
+                </div>
+                <h6 class="mt-2">Farm Location<span class="red-star">*</span></h6>
+                <div class="col-md-4">
+                    <div class="form-floating">
+                        <input type="text" class="form-control validationCustom06" id="" placeholder="" required>
+                        <label for="validationCustom06">Barangay</label>
+                        <div class="invalid-feedback">Please enter.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-floating">
+                        <input type="text" class="form-control validationCustom07" id="" placeholder="" required>
+                        <label for="validationCustom07">Municipality</label>
+                        <div class="invalid-feedback">Please enter.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-floating">
+                        <input type="text" class="form-control validationCustom08" id="" placeholder="" required>
+                        <label for="validationCustom08">Province</label>
+                        <div class="invalid-feedback">Please enter.</div>
+                    </div>
+                </div>
+                <div class="col-md-3 mt-4">
+                    <label>Farm Size</label>
+                    <input type="number" placeholder="In hectares" class="form-control farmSize no-spin-button" required>
+                </div>
+                <div class="col-md-4 mt-3">
+                    <label for="farmType" class="form-label">Farm Type<span class="red-star">*</span></label>
+                    <select class="form-select" id="" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option value="IRRIGATED">Irrigated</option>
+                        <option value="UPLAND">Rainfed Upland</option>
+                        <option value="LOWLAND">Rainfed Lowland</option>
+                    </select>
+                    <div class="invalid-feedback">Please select.</div>
+                </div>
+
+            </div>
+
+                <div class="form-group">
+                    <label>Crops</label>
+                    <div class="dynamic-input " id="cropsContainer"></div>
+                    <div class="d-flex justify-content-end mb-2">
+                    <a type="button" class="btn btn-primary text-end addCropButton">Add Crop</a>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Livestock</label>
+                    <div class="dynamic-input" id="livestockContainer"></div>
+                    <div class="d-flex justify-content-end mb-2">
+                    <a type="button" class="btn btn-primary addLivestockButton">Add Livestock</a>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                <a class="btn btn-danger remove-farm">Remove Farm</a>
+                </div>
+
+            </div>
+  `;
+
+    let newLivestockInput = `
+      <div class="col-md-6 mb-3">
+          <input type="number" placeholder="Number of heads" class="form-control no-spin-button" required max="9999999999" min="0" step="1">
+          <div class="invalid-feedback">Please enter.</div>
+      </div>
+      <div class="col-md-6 mb-3">
+          <div class="input-group mb-2">
+              <input type="text" class="form-control livestock" placeholder="Enter animal type" required>
+              <div class="input-group-append">
+                  <a class="btn btn-danger removeLivestockButton">Remove</a>
+              </div>
+          </div>
+      </div>
+  `;
+
+    let newCropInput = `
+      <div class="col-md-3 mb-3 mt-3 d-flex align-items-center">
+          <label class="form-check-label" for="hvc">High value crop?</label>
+          <div class="form-check ms-2">
+              <input class="form-check-input crop" style="width: 2rem; height: 2rem;" type="checkbox" id="">
+          </div>
+      </div>
+      <div class="col-md-5 mb-3">
+          <label class="ms-1">Crop Area</label>
+          <input id="" type="number" placeholder="In hectares" class="form-control crop farmSize no-spin-button" required>
+      </div>
+      <div class="col-md-2 mb-3">
+          <label>Classification</label>
+          <input type="number" class="form-control crop farmSize no-spin-button" required>
+      </div>
+      <div class="d-flex justify-content-end col-md-2 mb-3 mt-4">
+          <a class="btn btn-danger removeCropButton">Remove</a>
+      </div>
+  `;
+
+    document.getElementById('addFarmButton').addEventListener('click', function() {
+      const farmContainer = document.getElementById('farmContainer');
+
+      // Create a new farm input card
+      const newFarmCard = document.createElement('div');
+      newFarmCard.className = 'card my-2';
+      newFarmCard.innerHTML = newFarmInput;
+
+      // Append the new card to the container
+      farmContainer.appendChild(newFarmCard);
+
+      entryFade(newFarmCard);
+
+      // Add event listeners for adding crops and livestock
+      newFarmCard.querySelector('.addCropButton').addEventListener('click', function() {
+        const cropsContainer = newFarmCard.querySelector('#cropsContainer');
+        const cropInputDiv = document.createElement('div');
+        cropInputDiv.className = 'row dynamic-input my-2 p-2';
+        cropInputDiv.style.boxShadow = "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px";
+        cropInputDiv.innerHTML = newCropInput;
+        cropsContainer.appendChild(cropInputDiv);
+        entryFade(cropInputDiv);
+
+        // Add event listener for the remove button
+        cropInputDiv.querySelector('.removeCropButton').addEventListener('click', function() {
+          removalFade(cropInputDiv);
+          setTimeout(() => {
+            cropsContainer.removeChild(cropInputDiv);
+          }, 250);
+        });
+      });
+
+      newFarmCard.querySelector('.addLivestockButton').addEventListener('click', function() {
+        const livestockContainer = newFarmCard.querySelector('#livestockContainer');
+        const livestockInputDiv = document.createElement('div');
+        livestockInputDiv.className = 'row dynamic-input mt-2 px-2 pt-3 mb-2';
+        livestockInputDiv.style.boxShadow = "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px";
+        livestockInputDiv.innerHTML = newLivestockInput;
+        livestockContainer.appendChild(livestockInputDiv);
+        entryFade(livestockInputDiv);
+
+        // Add event listener for the remove button
+        livestockInputDiv.querySelector('.removeLivestockButton').addEventListener('click', function() {
+          removalFade(livestockInputDiv);
+          setTimeout(() => {
+            livestockContainer.removeChild(livestockInputDiv);
+          }, 250);
+
+        });
+      });
+
+      // Add event listener to the remove farm button
+      newFarmCard.querySelector('.remove-farm').addEventListener('click', function() {
+        removalFade(newFarmCard);
+        setTimeout(() => {
+          farmContainer.removeChild(newFarmCard);
+        }, 250);
+
+      });
+    });
+
+    // document.getElementById('submitFarmsButton').addEventListener('click', function(e) {
+    //     e.preventDefault();
+    //     const farms = [];
+    //     const farmCards = document.querySelectorAll('#farmContainer .card');
+
+    //     farmCards.forEach(card => {
+    //         const farmName = card.querySelector('.farmName').value;
+    //         const farmLocation = card.querySelector('.farmLocation').value;
+
+    //         // Collect crops
+    //         const cropsInputs = card.querySelectorAll('.cropInput');
+    //         const crops = Array.from(cropsInputs).map(input => input.value.trim()).filter(value => value);
+
+    //         // Collect livestock
+    //         const livestockInputs = card.querySelectorAll('.livestockInput');
+    //         const livestock = Array.from(livestockInputs).map(input => input.value.trim()).filter(value => value);
+
+    //         farms.push({ 
+    //             name: farmName, 
+    //             location: farmLocation,
+    //             crops: crops,
+    //             livestock: livestock
+    //         });
+    //     });
+
+    //     document.getElementById('farmsData').value = JSON.stringify(farms);
+    //     document.getElementById('farmForm').submit();
+    // });
+  </script>
+
+  
+
+<div class="modal fade" id="ExtralargeModal" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Filter</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="max-height: 80vh; overflow-y: auto;">
+                <form id="filterForm" class="row">
+
+
+                    <div class="col-md-3 mb-3">
+                        <label for="cropAreaComparison" class="form-label">Farmer<strong>(Contains)</strong></label>
+                        <div class="input-group">
+                            <select id="cropAreaComparison" class="form-select">
+                                <option value="last_name">Last Name</option>
+                                <option value="first_name">First Name</option>
+                                <option value="middle_name">Middle Name</option>
+                                <option value="extension_name">Extension Name</option>
+                            </select>
+                            <input type="text" id="cropArea" class="form-control" placeholder="Enter">
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                        <label for="gender" class="form-label">Gender</label>
+                        <select id="gender" class="form-select">
+                            <option selected disabled>-- Select --</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label for="birthday" class="form-label">Birthday <strong>(Filter by date)</strong></label>
+                        <input type="date" id="birthday" class="form-control">
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label for="cropAreaComparison" class="form-label">Farmer Address<strong>(Contains)</strong></label>
+                        <div class="input-group">
+                            <select id="cropAreaComparison" class="form-select">
+                                <option value="farmer_barangay">Barangay</option>
+                                <option value="farmer_municipality">Municipality</option>
+                                <option value="farmer_address">Province</option>
+                            </select>
+                            <input type="text" id="cropArea" class="form-control" placeholder="Enter">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label for="cropAreaComparison" class="form-label">Owner Name<strong>(Contains)</strong></label>
+                        <div class="input-group">
+                            <select id="cropAreaComparison" class="form-select">
+                                <option value="owner_fname">Owner First Name</option>
+                                <option value="owner_lname">Owner Last Name</option>
+                                <option value="farmer_address">Province</option>
+                            </select>
+                            <input type="text" id="cropArea" class="form-control" placeholder="Enter">
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-2 mb-3">
+                        <label for="ownershipType" class="form-label">Ownership Type</label>
+                        <select id="ownershipType" class="form-select">
+                            <option selected disabled>-- Select Type --</option>
+                            <option value="tenant">Tenant</option>
+                            <option value="lessee">Lessee</option>
+                            <option value="registered_owner">Registered Owner</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label for="cropAreaComparison" class="form-label">Parcel Address</label>
+                        <div class="input-group">
+                            <select id="cropAreaComparison" class="form-select">
+                                <option value="barangay">Barangay</option>
+                                <option value="municipality">Municipality</option>
+                                <option value="province">Province</option>
+                            </select>
+                            <input type="number" id="cropArea" class="form-control" placeholder="Enter">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label for="cropname" class="form-label">Crop/Livestock Name <strong>(Contains)</strong></label>
+                        <input type="text" id="cropname" class="form-control" placeholder="Enter crop/livestock name">
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label for="parcelAreaComparison" class="form-label">Parcel Area</label>
+                        <div class="input-group">
+                            <select id="parcelAreaComparison" class="form-select">
+                                <option value="exact">Is Exact</option>
+                                <option value="lessThan">Less Than</option>
+                                <option value="greaterThan">Greater Than</option>
+                            </select>
+                            <input type="number" id="parcelArea" class="form-control" placeholder="Enter">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label for="cropAreaComparison" class="form-label">Crop Area</label>
+                        <div class="input-group">
+                            <select id="cropAreaComparison" class="form-select">
+                                <option value="exact">Is Exact</option>
+                                <option value="lessThan">Less Than</option>
+                                <option value="greaterThan">Greater Than</option>
+                            </select>
+                            <input type="number" id="cropArea" class="form-control" placeholder="Enter">
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="classification" class="form-label">Classification <strong>(isExact)</strong></label>
+                        <input type="text" id="classification" class="form-control" placeholder="Enter classification">
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label for="farmType" class="form-label">Farm Type</label>
+                        <select id="farmType" class="form-select">
+                            <option selected disabled>-- Select Farm Type --</option>
+                            <option value="irrigated">Irrigated</option>
+                            <option value="upland">Upland</option>
+                            <option value="lowland">Lowland</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label for="noHeadsComparison" class="form-label">Number of Heads</label>
+                        <div class="input-group">
+                            <select id="noHeadsComparison" class="form-select">
+                                <option value="exact">Is Exact</option>
+                                <option value="lessThan">Less Than</option>
+                                <option value="greaterThan">Greater Than</option>
+                            </select>
+                            <input type="number" id="noHeads" class="form-control" placeholder="Enter">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label class="form-label">Active?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" style="width: 20px; height: 20px;" type="checkbox" id="activeYes" value="yes">
+                            <label class="form-check-label" for="activeYes">Yes</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label class="form-label">HVC?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" style="width: 20px; height: 20px;" type="checkbox" id="activeYes" value="yes">
+                            <label class="form-check-label" for="activeYes">Yes</label>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Filter</button>
+            </div>
+        </div>
+    </div>
+</div><!-- End Large Modal-->
+
+<footer id="footer" class="footer">
+
+    <!-- jQuery -->
+    
+        <!-- DataTables JS -->
+        <script src="https://cdn.datatables.net/2.1.7/js/dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/3.1.2/js/dataTables.buttons.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/3.1.2/js/buttons.html5.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/3.1.2/js/buttons.print.min.js"></script>
+        <script src="https://cdn.datatables.net/colreorder/2.0.4/js/dataTables.colReorder.min.js"></script>
+        <script src="https://cdn.datatables.net/fixedheader/4.0.1/js/dataTables.fixedHeader.min.js"></script>
+        <script src="https://cdn.datatables.net/responsive/3.0.3/js/dataTables.responsive.min.js"></script>
+        <script src="https://cdn.datatables.net/rowreorder/1.5.0/js/dataTables.rowReorder.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    
+      </footer><!-- End Footer -->
+    
+      <!-- Vendor JS Files -->
+      <script src="../assets/vendor/apexcharts/apexcharts.min.js"></script>
+      <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="../assets/vendor/chart.js/chart.umd.js"></script>
+      <script src="../assets/vendor/echarts/echarts.min.js"></script>
+      <script src="../assets/vendor/quill/quill.js"></script>
+      <script src="../assets/vendor/tinymce/tinymce.min.js"></script>
+      <script src="../assets/vendor/php-email-form/validate.js"></script>
+      <!-- Template Main JS File -->
+      <script src="../assets/js/main.js"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    
+      <script>
+          AOS.init();
+      </script>
+
+   <script>
+    let totalEntries = 10;
+
+    // Calculate 25%, 50%, and 75% of the total entries
+    let twentyFivePercent = Math.ceil(totalEntries * 0.25);
+    let fiftyPercent = Math.ceil(totalEntries * 0.50);
+    let seventyFivePercent = Math.ceil(totalEntries * 0.75);
+
+    let lengthMenuValues = [10, twentyFivePercent, fiftyPercent, seventyFivePercent, -1];
+    let lengthMenuLabels = [10,
+      `${twentyFivePercent} (25%)`,
+      `${fiftyPercent} (50%)`,
+      `${seventyFivePercent} (75%)`,
+      "Show All"
+    ];
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const example = document.getElementById("example");
+
+      setTimeout(() => {
+        example.classList.remove("d-none");
+        $('#example').DataTable({
+
+          dom: 'ltp',
+          responsive: true,
+          buttons: [
+            // 'copy', 'csv', 'print', 'excel', 'pdf'
+          ],
+          colReorder: true,
+          fixedHeader: true,
+          rowReorder: false,
+          lengthMenu: [
+            lengthMenuValues, // Values for entries
+            lengthMenuLabels // Labels for entries
+          ],
+          columnDefs: [{
+            targets: 0,
+            render: function(data, type, row) {
+              if (type === 'display' || type === 'filter') {
+
+              if(data === "BUTTON"){
+                return `<button type="button" class="btn btn-danger ms-4" data-bs-toggle="modal" data-bs-target="#basicModal"><i class="bi bi-question-diamond-fill"></i>
+</button>`;
+            }
+            return `<b>${data}</b>`;
+              }
+              return null;
+            }
+          }]
+        });
+      }, 500);
+    });
+  </script>
+    <div class="modal fade" id="basicModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Provide FFRS code</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="col-md-12 mb-3">
+  
+              <label for="cropname" class="form-label">Enter <strong>FFRS</strong> code</label>
+              <input type="text" id="cropname" class="form-control" placeholder="Type here...">
+  
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Unregistered Modal-->
+
+    <div class="modal fade" id="activityModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Activity Log</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="col-md-12 mb-3">
+              <div class="row">
+                <div class="col-4">
+                  <strong>Modified Times:</strong>
+                </div>
+                <div class="col-8">
+                  <p>0</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <strong>Modified By:</strong>
+                </div>
+                <div class="col-8">
+                  <p>sample@gmail.com</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <strong>Modified At:</strong>
+                </div>
+                <div class="col-8">
+                  <p>00:00 DD/MM/YYYY</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+      </div>
+    </div><!-- Activity  Modal-->
+  
+
+</body>
+</html>
+
