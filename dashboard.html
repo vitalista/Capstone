@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
   
-    <title>BaliwagAgriOffice</title>
+   <title>BaliwagAgriOffice</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
   
@@ -455,7 +455,7 @@
                      <div class="col-lg-6">
                         <div class="card">
                            <div class="card-body">
-                              <h5 class="card-title">Programs Chart</h5>
+                              <h5 class="card-title">Distributions Chart</h5>
 
                               <!-- Bar Chart -->
                               <div id="barChart"></div>
@@ -495,7 +495,7 @@
                      <div class="col-lg-6">
                         <div class="card">
                            <div class="card-body">
-                              <h5 class="card-title">Parcel Size</h5>
+                              <h5 class="card-title">Resources Chart</h5>
 
                               <!-- Bar Chart -->
                               <div id="barChart2"></div>
@@ -505,7 +505,7 @@
                                     new ApexCharts(document.querySelector("#barChart2"), {
                                        series: [{
                                           name: 'No. of Farmers',
-                                          data: [1, 3, 5]
+                                          data: [13, 33, 50]
                                        }],
                                        chart: {
                                           type: 'bar',
@@ -521,7 +521,7 @@
                                           enabled: true
                                        },
                                        xaxis: {
-                                          categories: ['Small', 'Medium', 'Large'],
+                                          categories: ['Cash', 'Fertilizer', 'Seedlings'],
                                        },
                                        colors: ["#00e296"],
                                     }).render();
