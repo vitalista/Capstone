@@ -668,10 +668,10 @@
             example.classList.remove("d-none");
             $('#example').DataTable({
     
-              dom: 'ltp',
+              dom: 'B<"table-top"lf>t<"table-bottom"ip>',
               responsive: true,
               buttons: [
-                // 'copy', 'csv', 'print', 'excel', 'pdf'
+                'copy', 'csv', 'print', 'excel', 'pdf'
               ],
               colReorder: true,
               fixedHeader: true,
