@@ -180,7 +180,7 @@
 .slideshow {
   display: flex;
   width: 100%;
-  overflow-x: scroll; /*scrollbar will be on this div*/
+  overflow-x: scroll; /*scrollbar will be on this div override*/
 }
 
 .slideshow::-webkit-scrollbar {
