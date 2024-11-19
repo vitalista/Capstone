@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modular Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header, footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    main {
+      display: flex;
+      flex: 1;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #f4f4f4;
+      padding: 15px;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header"></div>
+  <div id="main"></div>
+  <div id="footer"></div>
+
+  <script>
+    // Header Component
+    function createHeader() {
+      const header = document.createElement('header');
+      header.innerHTML = `
+        <h1>Website Header</h1>
+        <nav>
+          <a href="#">Home</a> |
+          <a href="#">About</a> |
+          <a href="#">Contact</a>
+        </nav>
+      `;
+      return header;
+    }
+
+    // Sidebar Component
+    function createSidebar() {
+      const sidebar = document.createElement('div');
+      sidebar.classList.add('sidebar');
+      sidebar.innerHTML = `
+        <h3>Sidebar</h3>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+        </ul>
+      `;
+      return sidebar;
+    }
+
+    // Main Content Component
+    function createMainContent() {
+      const mainContent = document.createElement('div');
+      mainContent.classList.add('content');
+      mainContent.innerHTML = `
+        <h2>Main Content</h2>
+        <p>This is where your main content goes.</p>
+      `;
+      return mainContent;
+    }
+
+    // Footer Component
+    function createFooter() {
+      const footer = document.createElement('footer');
+      footer.innerHTML = `
+        <p>&copy; 2024 My Website</p>
+      `;
+      return footer;
+    }
+
+    // Function to assemble the layout
+    function assembleLayout() {
+      // Inject components into the DOM
+      document.getElementById('header').appendChild(createHeader());
+      const main = document.getElementById('main');
+      main.appendChild(createSidebar());
+      main.appendChild(createMainContent());
+      document.getElementById('footer').appendChild(createFooter());
+    }
+
+    // Call the function to assemble the layout on page load
+    window.onload = assembleLayout;
+  </script>
+
+</body>
+</html>
